@@ -1,0 +1,27 @@
+buildPack: docker-helm
+pipelineConfig:
+  pipelines:
+    pullRequest:
+      build:
+        replace: true
+        steps:
+        - command: echo 'This pipeline will now execute "kubectl apply -f manifests/" to declaratively apply any diffs in manifests/*.yaml to the targeted kubernetes cluster '
+        steps:
+        - command: git clone REPLACE_ME_GIT_PROVIDER/REPLACE_ME_ORG/REPLACE_ME_APP_NAME.git
+        steps:
+        - command: cd REPLACE_ME_APP_NAME
+        steps:
+        - command: kubectl apply -f manifests/
+    release:
+      setVersion:
+        steps:
+          - sh: jx step next-version --use-git-tag-only --tag
+            name: tag-with-new-version
+      build:
+        replace: true
+        steps:
+        - command: echo "This template does not build anything"
+      promote:
+        replace: true
+        steps:
+        - command: echo "This template does not need promotion"
