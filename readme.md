@@ -20,14 +20,14 @@ Note: Each instance of Kubefeed will execute kubectl apply commands on the kuber
 
 ### 1.2 Run this command to add kampfires as a Quickstart location for your team:
 
-jx create quickstartlocation --url https://github.com --owner kampfires --kind github
+`jx create quickstartlocation --url https://github.com --owner kampfires --kind github`  
+
 To get the list of registered quickstart locations run command:
 
-jx get quickstartlocations
-Then, run simply run the following command to create your first runtime bundle or connector project:
+`jx get quickstartlocations`  
 
 ### 1.3 Run the Following command to to initiate the quickstart wizard which will create your own kubefeed instance for you.
-jx create quickstart --owner kampfires --filter kubefeed-quickstart
+`jx create quickstart --owner kampfires --filter kubefeed-quickstart`
 
 ## How to use Kubefeed
 
