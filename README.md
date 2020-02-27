@@ -18,7 +18,7 @@ We will need to use Jx Quickstart commands to create your own Kubefeed instance 
 
 ### 1.1 Ensure you are logged into JX and authenticated to the Kubernetes cluster you would like kubefeed to provide declarative kubernetes object management for. 
 
-Note: Each instance of Kubefeed will execute kubectl apply commands on the kubernetes cluster you are connected to when you run jx create quickstart to initialize your kubefeed instance. You can have as many kubefeed instances as you would like, however you shoudl only need a single kubefeed instance per kubernetes cluster. You will need a dedicated kubefeed instance for each kubernetes cluster you want kubefeed to manage objects for. You can run jx create quikstart to create a new kubefeed instance for each kubernetes cluster, but be sure you are logged into the appropriatejx environment and kubernetes cluster you desire to target when you run the quickstart.  
+Note: Each instance of Kubefeed will execute kubectl apply commands on the kubernetes cluster you are connected to when you run jx create quickstart to initialize your kubefeed instance. You can have as many kubefeed instances as you would like, however you shoudl only need a single kubefeed instance per kubernetes cluster. You will need a dedicated kubefeed instance for each kubernetes cluster you want kubefeed to manage objects for.  
 
 ### 1.2 Run this command to add kampfires as a Quickstart location for your team:
 
