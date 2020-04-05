@@ -8,8 +8,6 @@ Once initialized, you can add new manifests or update existing manifests in your
 
 To delete objects, simply move a manifest from the manifests/ folder to the delete/folder, and kubefeed will apply kubectl delete -f on the file and then delete the file as the delete only needs to be applied once.
 
-**Note: Kubefeed is currently in Alpha state. When a user who is an authorized admin on a target repo submits a pullrequest, kubefeed will currently process kubectl apply and deletes fore manifests BEFORE the pullrequest is approved. This only occurs if the pullRequest is initiated by a user who is both an admin on the target repo, and listed as an approver in the OWNERS file on the target repo. If a user who is not an admin on the target repo submits a pullrequest, any changes to manifests will not be processed until an authorized admin approves the request.**
-
 ## Requirements
 Kubefeed requires Jenkins-X running on a Kubernetes cluster, and should be setup using an account that has admin permissions in the target kubernetes cluster. 
 
